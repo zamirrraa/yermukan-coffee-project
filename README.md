@@ -1,2 +1,2 @@
 # yermukan-coffee-project
-Coffee House website project
+Coffee Shop website project
