@@ -1,82 +1,183 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop</title>
+    <title>Coffee House</title>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f5eee6;
-        margin: 0;
-        padding: 40px;
-        text-align: center;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    h1 {
-        color: #593b2a;
-    }
-
-    .card {
-        background-color: white;
-        width: 300px;
-        margin: 30px auto;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px #cccccc;
-    }
-
-    .card img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .price {
-        color: #8b5e3c;
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    button {
-        background-color: #593b2a;
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #8b5e3c;
-    }
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<h1>Coffee Shop</h1>
-<p>Different flavors of delicious coffe:] </p>
+<header class="site-header">
+    <nav class="navbar">
+        <a href="#home" class="navbar__logo">Coffee House ☕</a>
 
-<div class="card">
+        <input type="checkbox" id="menu-toggle" class="navbar__toggle">
 
-    <img
-    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ballerina_Cappuccina.png"
-    alt="Cup of coffee"
->
-      
+        <label for="menu-toggle" class="navbar__burger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-    <h2>Cappuccino</h2>
+        <div class="navbar__links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
 
-    <p class="price">990KZT</p>
+<main>
 
-    <p>
-        A delicious cappuccino made with espresso
-        and creamy steamed milk.
-    </p>
+    <section id="home" class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Your Perfect Coffee Moment</h1>
+            <p class="hero__description">
+                Fresh coffee, cozy atmosphere, and happiness in every cup.
+            </p>
+            <a href="#menu" class="button">Explore Our Menu</a>
+        </div>
 
-    <button type="button">Order Now</button>
+        <img
+            class="hero__image"
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600"
+            alt="Freshly prepared cup of coffee"
+        >
+    </section>
 
-</div>
+    <section id="menu" class="menu">
+        <h2 class="section-title">Our Coffee Menu</h2>
+        <p class="menu__description">Find your favorite coffee!</p>
+
+        <div class="menu__grid">
+
+            <article class="menu-card">
+                <img
+                    class="menu-card__image"
+                    src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=500"
+                    alt="Cappuccino"
+                >
+                <h3 class="menu-card__title">Cappuccino</h3>
+                <p class="menu-card__description">
+                    Espresso with creamy steamed milk.
+                </p>
+                <p class="menu-card__price">990 KZT</p>
+                <a href="#contact" class="button">Order Now</a>
+            </article>
+
+            <article class="menu-card">
+                <img
+                    class="menu-card__image"
+                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500"
+                    alt="Latte"
+                >
+                <h3 class="menu-card__title">Latte</h3>
+                <p class="menu-card__description">
+                    Smooth coffee with warm milk.
+                </p>
+                <p class="menu-card__price">1,090 KZT</p>
+                <a href="#contact" class="button">Order Now</a>
+            </article>
+
+            <article class="menu-card">
+                <img
+                    class="menu-card__image"
+                    src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=500"
+                    alt="Espresso"
+                >
+                <h3 class="menu-card__title">Espresso</h3>
+                <p class="menu-card__description">
+                    Strong coffee with a rich flavor.
+                </p>
+                <p class="menu-card__price">790 KZT</p>
+                <a href="#contact" class="button">Order Now</a>
+            </article>
+
+            <article class="menu-card">
+                <img
+                    class="menu-card__image"
+                    src="https://images.unsplash.com/photo-1551030173-122aabc4489c?w=500"
+                    alt="Americano"
+                >
+                <h3 class="menu-card__title">Americano</h3>
+                <p class="menu-card__description">
+                    Classic espresso with hot water.
+                </p>
+                <p class="menu-card__price">890 KZT</p>
+                <a href="#contact" class="button">Order Now</a>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Our Coffee House</h2>
+
+        <p class="about__text">
+            We believe that every day is better with good coffee.
+            Our coffee house offers freshly prepared drinks,
+            friendly service, and a cozy atmosphere.
+            Visit us and enjoy your favorite cup!
+        </p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="contact__description">
+            Have a question? Send us a message!
+        </p>
+
+        <form class="contact__form">
+
+            <label class="contact__label" for="name">Your Name</label>
+            <input
+                class="contact__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label class="contact__label" for="email">Your Email</label>
+            <input
+                class="contact__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label class="contact__label" for="message">Your Message</label>
+            <textarea
+                class="contact__input contact__input--textarea"
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message"
+                required
+            ></textarea>
+
+            <button class="button contact__button" type="submit">
+                Send Message
+            </button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Coffee House. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
